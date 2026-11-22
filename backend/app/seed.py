@@ -543,5 +543,22 @@ SEED_ROWS: dict[str, list[dict[str, Any]]] = {
   '解析规则版本': '采集血缘样例3',
   '标准化版本': '采集血缘样例3',
   '下游消费标识': '采集血缘样例3',
-  '记录时间': '2026-09-03'}]
+  '记录时间': '2026-09-03'}],
+    "forensic_delivery": [{'id': 1,
+  'status': '部分撤回',
+  'pending': False,
+  'abnormal': True,
+  '取证编号': 'FREQ-LEGACY-01',
+  '申请主题': '历史跨区域取证（区域别名兼容）',
+  '涉及区域': 'cn-north-1,cn-south-1',
+  '已授权区域': 'north',
+  '撤回区域': 'south',
+  '数据包状态': '已就绪',
+  '签发凭证': 'cred-legacy-01',
+  '访问结论': '尚未下载',
+  '更新时间': '2026-09-03T09:00:00',
+  'scope_note': '2026年8月历史取证单，区域沿用旧编码',
+  'credential_scope': ['north', 'south'],
+  'package': None}],
+    "forensic_audit": []
 }

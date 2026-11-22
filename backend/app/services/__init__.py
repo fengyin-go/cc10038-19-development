@@ -22,6 +22,8 @@ from app.services.data_export import DataExportService
 from app.services.replay_engine import ReplayEngineService
 from app.services.aggregation_view import AggregationViewService
 from app.services.data_lineage import DataLineageService
+from app.services.forensic_delivery import ForensicDeliveryService
+from app.services.forensic_audit import ForensicAuditService
 
 SERVICES: dict[str, BaseModuleService] = {
     "source_registry": SourceRegistryService(),
@@ -44,6 +46,8 @@ SERVICES: dict[str, BaseModuleService] = {
     "replay_engine": ReplayEngineService(),
     "aggregation_view": AggregationViewService(),
     "data_lineage": DataLineageService(),
+    "forensic_delivery": ForensicDeliveryService(),
+    "forensic_audit": ForensicAuditService(),
 }
 
 

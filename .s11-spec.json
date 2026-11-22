@@ -672,6 +672,80 @@
       "desc": "追溯从原始日志到标准化明细再到下游消费的全链路血缘",
       "page_shape": "dag-graph",
       "_page_shape_explicit": true
+    },
+    {
+      "key": "forensic_delivery",
+      "name": "跨区域取证交付",
+      "entity": "取证申请",
+      "fields": [
+        "取证编号",
+        "申请主题",
+        "涉及区域",
+        "已授权区域",
+        "撤回区域",
+        "数据包状态",
+        "签发凭证",
+        "访问结论",
+        "更新时间"
+      ],
+      "statuses": [
+        "待授权",
+        "部分授权",
+        "已签发",
+        "准备中",
+        "部分撤回",
+        "可下载",
+        "已关闭"
+      ],
+      "actions": [
+        "区域授权",
+        "撤回共享",
+        "签发凭证",
+        "准备数据包",
+        "下载交付"
+      ],
+      "action_targets": [
+        "部分授权",
+        "部分撤回",
+        "已签发",
+        "准备中",
+        "可下载"
+      ],
+      "metrics": [
+        "取证申请数",
+        "可下载申请",
+        "部分撤回申请"
+      ],
+      "desc": "跨区域日志明细取证：按区域授权裁剪原始行、准备授权取证数据包并拦截归属不符下载",
+      "page_shape": "forensic-workbench",
+      "_page_shape_explicit": true
+    },
+    {
+      "key": "forensic_audit",
+      "name": "取证审计条目",
+      "entity": "取证审计",
+      "fields": [
+        "取证编号",
+        "动作",
+        "区域",
+        "操作人",
+        "时间",
+        "结论"
+      ],
+      "statuses": [
+        "成功",
+        "拦截"
+      ],
+      "actions": [],
+      "action_targets": [],
+      "metrics": [
+        "审计条目数",
+        "成功条目",
+        "拦截条目"
+      ],
+      "desc": "记录区域授权、撤回共享、数据包准备与下载拦截的取证审计链路",
+      "page_shape": "crud-table",
+      "_page_shape_explicit": true
     }
   ]
 }
